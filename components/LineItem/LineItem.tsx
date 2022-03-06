@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { IPhoto } from '../../interfaces/photo.interface';
 import Image from "next/image";
 import CardConainer from '../CardContainer/CardConainer';

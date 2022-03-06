@@ -17,7 +17,7 @@ const Layout = ({ children, title = 'This is the default title', description = "
       description={description}
     />
     <header >
-      <Navbar navBar={null}></Navbar>
+      <Navbar ></Navbar>
     </header>
     <main>
       {children}

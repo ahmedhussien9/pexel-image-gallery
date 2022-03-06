@@ -1,7 +1,5 @@
 
-
 import styles from "./Switch.module.scss";
-
 type Props = {
     darkTheme: boolean,
     handleToggle: (item) => void;
