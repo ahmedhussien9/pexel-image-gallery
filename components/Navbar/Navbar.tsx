@@ -38,7 +38,7 @@ export default function Navbar({ navBar }) {
     <nav className={`${styles.nav}`} role="navigation">
       <ul className={`${styles.list} container`}>
         <li className={styles.item}>
-          <FontAwesomeIcon icon={faDragon} className={styles.logo} />
+          <FontAwesomeIcon icon={faDragon} size={"2x"} className={styles.logo} />
         </li>
         <li className={`${styles.item} ${styles.link}`}>
           <Switch darkTheme={darkTheme} handleToggle={handleToggle}></Switch>
