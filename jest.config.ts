@@ -8,5 +8,5 @@ export default {
     "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
     "/^.+.(css|less|scss|sass)$/": "identity-obj-proxy",
   },
-  "snapshotSerializers": ["enzyme-to-json/serializer"],
+  snapshotSerializers: ["enzyme-to-json/serializer"],
 };

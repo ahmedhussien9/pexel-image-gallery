@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react'
-import PageHeader from "../PageHeader/PageHeader";
+import { render, screen } from '@testing-library/react';
+import PageHeader from "../components/PageHeader/PageHeader";
 
 describe('Page Header Component', () => {
     const data = {
