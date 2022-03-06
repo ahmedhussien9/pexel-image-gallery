@@ -1,0 +1,10 @@
+.PageHeader {
+    padding: 1rem;
+    margin: 1rem 0rem;
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    transition: all 0.3s ease-in-out;
+    .title {
+        color: #b7a210;
+    }
+}
