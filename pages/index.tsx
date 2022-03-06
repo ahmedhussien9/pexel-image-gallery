@@ -10,25 +10,29 @@ import {
   List,
   PopupDialog,
 } from '../components/index';
-import Loader from '../components/Loader/Loader';
+import { GetServerSideProps } from 'next';
 
 type Props = {
   photos: IPhoto[]
 }
 
 const IndexPage = ({ photos }: Props) => {
+
   const [show, setShow] = useState<boolean>(false);
+
   const [item, setItem] = useState<IPhoto>();
-  const closeModal = () => setShow(false);
+
+  const closeModal = (): void => setShow(false);
+
   const selectedItem = (item: IPhoto): void => {
     setItem(item);
     setShow(true);
   }
 
   return (
-    <Layout title="Home | Next.js + TypeScript Example">
+    <Layout title="Home | Stockholm Photo Gallery" description='The Most amazing places to visit in stockholm'>
       <Container >
-        <PageHeader title='Stockholm Photo Gallery' description='This is a description for the image gallery page'></PageHeader>
+        <PageHeader title='Stockholm Photo Gallery' description='Amazing places to visit in stockholm'></PageHeader>
         <List items={photos} onClickItem={selectedItem}></List>
       </Container>
       {item && (
@@ -41,7 +45,7 @@ const IndexPage = ({ photos }: Props) => {
   )
 }
 
-export async function getServerSideProps(context) {
+export const getServerSideProps: GetServerSideProps = async (context) => {
   const ImageGalleryData = await GetImageGalleryApi();
   const photosData = ImageGalleryData['photos'];
   return {
@@ -50,4 +54,6 @@ export async function getServerSideProps(context) {
     },
   };
 }
+
+
 export default IndexPage;

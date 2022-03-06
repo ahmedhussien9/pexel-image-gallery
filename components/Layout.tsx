@@ -2,19 +2,20 @@ import React, { ReactNode } from 'react'
 import Head from 'next/head'
 import Navbar from './Navbar/Navbar'
 import Footer from './Footer/Footer'
+import { NextSeo } from 'next-seo'
 
 type Props = {
   children?: ReactNode
   title?: string
+  description?: string
 }
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => (
+const Layout = ({ children, title = 'This is the default title', description = "This the default description" }: Props) => (
   <div>
-    <Head>
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" user-scalable="no" content="initial-scale=1.0, width=device-width" />
-    </Head>
+    <NextSeo
+      title={title}
+      description={description}
+    />
     <header >
       <Navbar navBar={null}></Navbar>
     </header>
